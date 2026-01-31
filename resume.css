@@ -142,11 +142,6 @@ body {
     width: 270px;
     height: 270px;
     border-radius: 45px;
-    transition: transform 0.2s ease;
-}
-
-.header img:hover {
-    transform: scale(1.03);
 }
 
 .header h1 {

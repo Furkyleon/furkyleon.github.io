@@ -4,11 +4,6 @@ const panels = layout ? layout.querySelector(".tab-panels") : null;
 const sections = Array.from(document.querySelectorAll(".collapsible-section"));
 
 if (layout && tabs && panels && sections.length) {
-  const hrs = document.querySelectorAll(".container > hr");
-  hrs.forEach((hr, index) => {
-    if (index > 0) hr.remove();
-  });
-
   const activateTab = (tabId) => {
     sections.forEach((section, index) => {
       const currentTabId = section.getAttribute("id");
