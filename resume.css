@@ -1,0 +1,450 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg,
+            #141e36 0%,
+            #040b27 100%);
+    margin: 0;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Tabs layout */
+
+.tabs-layout {
+    display: flex;
+    gap: 40px;
+    align-items: stretch;
+    margin-top: 0;
+    width: 100%;
+}
+
+.tabs-sidebar {
+    width: 270px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tabs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: visible;
+    gap: 12px;
+    width: 100%;
+    align-items: stretch;
+    min-width: 0;
+}
+
+.tabs-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.tab-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.06);
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    flex: 1 1 auto;
+    justify-content: center;
+    font-weight: 700;
+    white-space: nowrap;
+    min-width: 0;
+}
+
+.tab-button i {
+    font-size: 18px;
+}
+
+.tab-button.is-active {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.55);
+}
+
+.tab-panels {
+    min-height: 320px;
+    padding: 20px 22px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.is-active {
+    display: block;
+}
+
+.tab-panels .collapsible-section {
+    margin: 0;
+}
+
+.tab-panels h2.section-toggle {
+    cursor: default;
+    margin-top: 0;
+    margin-bottom: 12px;
+    display: none;
+}
+
+.tab-panels.measuring .tab-panel {
+    display: block !important;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 0;
+}
+
+.header-text {
+    text-align: center;
+    margin-bottom: -15px;
+    transition: transform 0.3s ease;
+}
+
+.header img {
+    width: 270px;
+    height: 270px;
+    border-radius: 45px;
+    transition: transform 0.2s ease;
+}
+
+.header img:hover {
+    transform: scale(1.03);
+}
+
+.header h1 {
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.header p {
+    color: white;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.header .univ {
+    text-decoration: none;
+    color: #bbbbbb;
+}
+
+.header .univ:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.contact a {
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+}
+
+.contact a i {
+    color: white;
+    font-size: 30px;
+    transition: transform 0.2s ease;
+}
+
+.contact a:hover i {
+    transform: scale(1.15);
+}
+
+/* Education */
+
+.education {
+    color: white;
+}
+
+.education .card {
+    margin-bottom: 20px;
+}
+
+.education h2 i {
+    margin-right: 8px;
+    margin-bottom: 5px;
+}
+
+.education h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.education h4 {
+    color: #bbbbbb;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.education ul {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #efeeee;
+}
+
+/* Experience */
+
+.experience {
+    color: white;
+}
+
+.experience .card {
+    margin-bottom: 20px;
+}
+
+.experience h2 i {
+    margin-right: 8px;
+}
+
+.experience h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.experience h4 {
+    color: #bbbbbb;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.experience ul {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #efeeee;
+}
+
+/* Activity */
+
+.activity {
+    color: white;
+}
+
+.activity .card {
+    margin-bottom: 20px;
+}
+
+.activity h2 i {
+    margin-right: 8px;
+}
+
+.activity h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.activity h4 {
+    color: #bbbbbb;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.activity ul {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #efeeee;
+}
+
+/* Project */
+
+.project {
+    color: white;
+}
+
+.project .card {
+    margin-bottom: 20px;
+}
+
+.project h2 i {
+    margin-right: 8px;
+}
+
+.project h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.project p {
+    color: #efeeee;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+/* Skill */
+
+.skill {
+    color: white;
+}
+
+.skill .skill-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 10px
+}
+
+.skill-grid::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background-color: rgba(255, 255, 255, 0.6);
+    transform: translateX(-50%);
+}
+
+.skill-grid .card:nth-child(even) {
+    padding-left: 10px;
+}
+
+.skill .card {
+    margin-bottom: 10px;
+}
+
+.skill h2 i {
+    margin-right: 8px;
+}
+
+.skill h3 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.skill p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #efeeee;
+}
+
+/* Responsive */
+
+@media (max-width: 900px) {
+    .container {
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .tabs-layout {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .tabs-sidebar {
+        width: 100%;
+    }
+
+    .tabs-content {
+        width: 100%;
+    }
+
+    .tabs {
+        justify-content: center;
+        flex-wrap: wrap;
+        overflow: visible;
+        row-gap: 10px;
+    }
+
+    .tab-button {
+        flex: 1 1 200px;
+    }
+
+    .header {
+        gap: 16px;
+        align-items: center;
+    }
+
+    .header img {
+        width: 170px;
+        height: 170px;
+        border-radius: 35px;
+    }
+
+    .contact {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 32px 16px;
+    }
+
+    .header img {
+        width: 140px;
+        height: 140px;
+        border-radius: 28px;
+    }
+
+    .tabs {
+        gap: 10px;
+    }
+
+    .tab-button {
+        flex: 1 1 160px;      /* 130px çok dar; 160 daha okunur */
+        padding: 10px 10px;   /* biraz sıkı ama taşmıyor */
+    }
+
+    .tab-panels {
+        padding: 16px 18px;
+    }
+
+    .skill .skill-grid {
+        grid-template-columns: 1fr;
+        row-gap: 12px;
+    }
+
+    .skill-grid::before {
+        display: none;
+    }
+
+    .skill-grid .card:nth-child(even) {
+        padding-left: 0;
+    }
+}
