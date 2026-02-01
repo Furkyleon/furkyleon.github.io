@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg,
+            #141e36 0%,
+            #040b27 100%);
+    margin: 0;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 40px 30px;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.header img {
+    width: 200px;
+    height: 200px;
+    border-radius: 45px;
+}
+
+.header h1 {
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.header p {
+    color: #e1e1e1;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.header .univ {
+    text-decoration: none;
+    color: #bbbbbb;
+}
+
+.header .univ:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.contact a {
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+}
+
+.contact a i {
+    color: white;
+    font-size: 30px;
+    transition: transform 0.2s ease;
+}
+
+.contact a:hover i {
+    transform: scale(1.15);
+}
+
+/* Navigation */
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    width: 100%;
+    padding: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.navigation a i {
+    color: white;
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.navigation a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.55);
+}
