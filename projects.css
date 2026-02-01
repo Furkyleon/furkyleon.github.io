@@ -1,0 +1,527 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg,
+            #141e36 0%,
+            #040b27 100%);
+    margin: 0;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 40px 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Tabs layout */
+
+.tabs-layout {
+    display: flex;
+    gap: 40px;
+    align-items: stretch;
+    margin-top: 0;
+    width: 100%;
+}
+
+.tabs-sidebar {
+    width: 270px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tabs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: visible;
+    gap: 12px;
+    width: 100%;
+    align-items: stretch;
+    min-width: 0;
+}
+
+.tabs-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.tab-button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.06);
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+    flex: 1 1 auto;
+    justify-content: center;
+    font-weight: 700;
+    white-space: nowrap;
+    min-width: 0;
+}
+
+.tab-button i {
+    font-size: 18px;
+}
+
+.tab-button.is-active {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.55);
+}
+
+.tab-panels {
+    min-height: 320px;
+    border-radius: 12px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.tab-panel {
+    display: none;
+}
+
+.tab-panel.is-active {
+    display: block;
+}
+
+.tab-panels .collapsible-section {
+    margin: 0;
+}
+
+.tab-panels h2.section-toggle {
+    cursor: default;
+    margin-top: 0;
+    margin-bottom: 12px;
+    display: none;
+}
+
+.tab-panels.measuring .tab-panel {
+    display: block !important;
+}
+
+/* Header */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 0;
+}
+
+.header-text {
+    text-align: center;
+    margin-bottom: -15px;
+    transition: transform 0.3s ease;
+}
+
+.header img {
+    width: 270px;
+    height: 270px;
+    border-radius: 45px;
+}
+
+.header h1 {
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.header p {
+    color: white;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.header .univ {
+    text-decoration: none;
+    color: #bbbbbb;
+}
+
+.header .univ:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.contact a {
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+}
+
+.contact a i {
+    color: white;
+    font-size: 30px;
+    transition: transform 0.2s ease;
+}
+
+.contact a:hover i {
+    transform: scale(1.15);
+}
+
+/* Sections */
+
+.section-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.card {
+    gap: 25px;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+}
+
+.logo-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 10px;
+}
+
+.card-header .logo-wrapper {
+    width: 65px;
+    height: 65px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-header .logo-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.card-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.logo-wrapper .maribor-logo,
+.logo-wrapper .aselsan-logo,
+.logo-wrapper .brisa-logo,
+.logo-wrapper .ies-logo {
+    background-color: white;
+    padding: 7.5px;
+}
+
+/* Project */
+
+.project {
+    color: white;
+}
+
+.project .card {
+    margin-bottom: 20px;
+}
+
+.project h2 i {
+    margin-right: 8px;
+}
+
+.project h3 {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+.project p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #e3d6f6;
+}
+
+/* Skill */
+
+.skill {
+    color: white;
+}
+
+.skill h3 {
+    font-size: 20px;
+}
+
+.skill p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #e3d6f6;
+}
+
+
+/* =========================
+   TIMELINE (education + experience + activity)
+   Her kart 1 satır, sağ/sol dönüşümlü
+   ========================= */
+
+.education .section-content,
+.experience .section-content,
+.activity .section-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Ortadaki dikey çizgi */
+.education .section-content::before,
+.experience .section-content::before,
+.activity .section-content::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    background: rgba(255, 255, 255, 0.35);
+}
+
+/* Kart genel: genişlik ve hizalama */
+.education .section-content .card,
+.experience .section-content .card,
+.activity .section-content .card {
+    position: relative;
+    width: calc(50% - 60px); /* çizgi ile kart arasında boşluk */
+    margin: 0;
+}
+
+/* Tek satırda tek kart: odd sol, even sağ */
+.education .section-content .card:nth-child(odd),
+.experience .section-content .card:nth-child(odd),
+.activity .section-content .card:nth-child(odd) {
+    margin-right: auto;
+}
+
+.education .section-content .card:nth-child(even),
+.experience .section-content .card:nth-child(even),
+.activity .section-content .card:nth-child(even) {
+    margin-left: auto;
+}
+
+/* Karttan çizgiye kısa bağlantı çizgisi */
+.education .section-content .card::after,
+.experience .section-content .card::after,
+.activity .section-content .card::after {
+    content: "";
+    position: absolute;
+    top: 32px; /* dot ile aynı hizaya yakın */
+    height: 2px;
+    background: rgba(255, 255, 255, 0.25);
+    z-index: 1;
+}
+
+/* Sol kart -> merkeze bağlantı */
+.education .section-content .card:nth-child(odd)::after,
+.experience .section-content .card:nth-child(odd)::after,
+.activity .section-content .card:nth-child(odd)::after {
+    right: -60px;
+    width: 60px;
+}
+
+/* Sağ kart -> merkeze bağlantı */
+.education .section-content .card:nth-child(even)::after,
+.experience .section-content .card:nth-child(even)::after,
+.activity .section-content .card:nth-child(even)::after {
+    left: -60px;
+    width: 60px;
+}
+
+/* =========================
+   Responsive: mobilde tek kolon + solda çizgi
+   ========================= */
+@media (max-width: 900px) {
+    /* çizgiler olmasın */
+    .education .section-content::before,
+    .experience .section-content::before,
+    .activity .section-content::before {
+        display: none;
+    }
+
+    .education .section-content .card::after,
+    .experience .section-content .card::after,
+    .activity .section-content .card::after {
+        display: none;
+    }
+
+    /* (eğer dot da varsa, onu da kapatmak istersen) */
+    .education .section-content .card::before,
+    .experience .section-content .card::before,
+    .activity .section-content .card::before {
+        display: none;
+    }
+    
+    .education .section-content::before,
+    .experience .section-content::before,
+    .activity .section-content::before {
+        left: 18px;
+        transform: none;
+    }
+
+    .education .section-content .card,
+    .experience .section-content .card,
+    .activity .section-content .card {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+    }
+
+    /* Dot solda çizginin üstüne gelsin */
+    .education .section-content .card::before,
+    .experience .section-content .card::before,
+    .activity .section-content .card::before {
+        left: 18px;
+        transform: translateX(-50%);
+    }
+
+    /* Mobilde tüm kartlar tek tarafta olduğu için iki durumu eşitle */
+    .education .section-content .card:nth-child(odd)::after,
+    .experience .section-content .card:nth-child(odd)::after,
+    .activity .section-content .card:nth-child(odd)::after,
+    .education .section-content .card:nth-child(even)::after,
+    .experience .section-content .card:nth-child(even)::after,
+    .activity .section-content .card:nth-child(even)::after {
+        left: 18px;
+        width: 18px;
+    }
+
+    .education .section-content .card:nth-child(odd),
+    .experience .section-content .card:nth-child(odd),
+    .activity .section-content .card:nth-child(odd),
+    .education .section-content .card:nth-child(even),
+    .experience .section-content .card:nth-child(even),
+    .activity .section-content .card:nth-child(even) {
+        margin: 0;
+        padding-left: 34px; /* çizgi + dot için içeriden boşluk */
+    }
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+    .container {
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
+
+    .tabs-layout {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .tabs-sidebar {
+        width: 100%;
+    }
+
+    .tabs-content {
+        width: 100%;
+    }
+
+    .tabs {
+        justify-content: center;
+        flex-wrap: wrap;
+        overflow: visible;
+        row-gap: 10px;
+    }
+
+    .tab-button {
+        flex: 1 1 200px;
+    }
+
+    .header {
+        gap: 16px;
+        align-items: center;
+    }
+
+    .header img {
+        width: 170px;
+        height: 170px;
+        border-radius: 35px;
+    }
+
+    .contact {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 32px 16px;
+    }
+
+    .header img {
+        width: 140px;
+        height: 140px;
+        border-radius: 28px;
+    }
+
+    .tabs {
+        gap: 10px;
+    }
+
+    .tab-button {
+        flex: 1 1 160px;      /* 130px çok dar; 160 daha okunur */
+        padding: 10px 10px;   /* biraz sıkı ama taşmıyor */
+    }
+
+    .tab-panels {
+        padding: 16px 18px;
+    }
+
+    .skill .skill-grid {
+        grid-template-columns: 1fr;
+        row-gap: 12px;
+    }
+
+    .skill-grid::before {
+        display: none;
+    }
+
+    .skill-grid .card:nth-child(even) {
+        padding-left: 0;
+    }
+}
