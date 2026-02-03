@@ -18,16 +18,10 @@ body {
     padding: 40px 30px;
     width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
-}
-
-.wrapper {
-    display: flex;
     gap: 40px;
     align-items: stretch;
     margin-top: 0;
-    width: 100%;
 }
 
 /* Left side */
@@ -207,6 +201,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
+    margin-bottom: 20px;
 }
 
 .education .card {
@@ -319,10 +314,7 @@ body {
     color: #e3d6f6;
 }
 
-/* =========================
-   TIMELINE (education + experience + activity)
-   Her kart 1 satır, sağ/sol dönüşümlü
-   ========================= */
+/* Timeline tasarımı */
 
 .education .section-content,
 .experience .section-content,
@@ -333,7 +325,6 @@ body {
     gap: 15px;
 }
 
-/* Ortadaki dikey çizgi */
 .education .section-content::before,
 .experience .section-content::before,
 .activity .section-content::before {
@@ -347,16 +338,14 @@ body {
     background: rgba(255, 255, 255, 0.35);
 }
 
-/* Kart genel: genişlik ve hizalama */
 .education .section-content .card,
 .experience .section-content .card,
 .activity .section-content .card {
     position: relative;
-    width: calc(50% - 60px); /* çizgi ile kart arasında boşluk */
+    width: calc(50% - 60px);
     margin: 0;
 }
 
-/* Tek satırda tek kart: odd sol, even sağ */
 .education .section-content .card:nth-child(odd),
 .experience .section-content .card:nth-child(odd),
 .activity .section-content .card:nth-child(odd) {
@@ -369,7 +358,6 @@ body {
     margin-left: auto;
 }
 
-/* Karttan çizgiye kısa bağlantı çizgisi */
 .education .section-content .card::after,
 .experience .section-content .card::after,
 .activity .section-content .card::after {
@@ -381,7 +369,6 @@ body {
     z-index: 1;
 }
 
-/* Sol kart -> merkeze bağlantı */
 .education .section-content .card:nth-child(odd)::after,
 .experience .section-content .card:nth-child(odd)::after,
 .activity .section-content .card:nth-child(odd)::after {
@@ -389,7 +376,6 @@ body {
     width: 60px;
 }
 
-/* Sağ kart -> merkeze bağlantı */
 .education .section-content .card:nth-child(even)::after,
 .experience .section-content .card:nth-child(even)::after,
 .activity .section-content .card:nth-child(even)::after {
@@ -397,10 +383,8 @@ body {
     width: 60px;
 }
 
-/* =========================
-   Responsive: mobilde tek kolon + solda çizgi
-   ========================= */
-@media (max-width: 900px) {
+/* Responsive */
+@media (max-width: 1000px) {
     /* çizgiler olmasın */
     .education .section-content::before,
     .experience .section-content::before,
@@ -414,7 +398,6 @@ body {
         display: none;
     }
 
-    /* (eğer dot da varsa, onu da kapatmak istersen) */
     .education .section-content .card::before,
     .experience .section-content .card::before,
     .activity .section-content .card::before {
@@ -437,7 +420,6 @@ body {
         padding-left: 0;
     }
 
-    /* Dot solda çizginin üstüne gelsin */
     .education .section-content .card::before,
     .experience .section-content .card::before,
     .activity .section-content .card::before {
@@ -445,7 +427,6 @@ body {
         transform: translateX(-50%);
     }
 
-    /* Mobilde tüm kartlar tek tarafta olduğu için iki durumu eşitle */
     .education .section-content .card:nth-child(odd)::after,
     .experience .section-content .card:nth-child(odd)::after,
     .activity .section-content .card:nth-child(odd)::after,
@@ -463,6 +444,42 @@ body {
     .experience .section-content .card:nth-child(even),
     .activity .section-content .card:nth-child(even) {
         margin: 0;
-        padding-left: 34px; /* çizgi + dot için içeriden boşluk */
+        padding-left: 34px;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 24px 16px;
+        flex-direction: column;
+        gap: 28px;
+        align-items: stretch;
+    }
+
+    .left-side {
+        width: 100%;
+        flex-shrink: 1;
+        gap: 16px;
+    }
+
+    .right-side {
+        gap: 28px;
+    }
+
+    .header img {
+        width: min(270px, 80vw);
+        height: min(270px, 80vw);
+        border-radius: 28px;
+    }
+
+    .contact {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .title {
+        font-size: 18px;
+        padding: 12px;
     }
 }
