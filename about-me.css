@@ -22,9 +22,7 @@ body {
     justify-content: center;
 }
 
-/* Tabs layout */
-
-.tabs-layout {
+.wrapper {
     display: flex;
     gap: 40px;
     align-items: stretch;
@@ -32,7 +30,9 @@ body {
     width: 100%;
 }
 
-.tabs-sidebar {
+/* Left side */
+
+.left-side {
     width: 270px;
     flex-shrink: 0;
     display: flex;
@@ -40,82 +40,29 @@ body {
     gap: 20px;
 }
 
-.tabs {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    overflow: visible;
-    gap: 12px;
-    width: 100%;
-    align-items: stretch;
-    min-width: 0;
-}
+/* Right side */
 
-.tabs-content {
-    flex: 1;
+.right-side {
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 45px;
 }
 
-.tab-button {
+.title {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 10px 14px;
+    padding: 15px;
     border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    background: rgba(255, 255, 255, 0.2);
     color: white;
-    font-size: 15px;
+    font-size: 20px;
     text-align: center;
-    cursor: pointer;
-    flex: 1 1 auto;
     justify-content: center;
     font-weight: 700;
-    white-space: nowrap;
-    min-width: 0;
-}
-
-.tab-button i {
-    font-size: 18px;
-}
-
-.tab-button.is-active {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.55);
-}
-
-.tab-panels {
-    min-height: 320px;
-    border-radius: 12px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.tab-panel {
-    display: none;
-}
-
-.tab-panel.is-active {
-    display: block;
-}
-
-.tab-panels .collapsible-section {
-    margin: 0;
-}
-
-.tab-panels h2.section-toggle {
-    cursor: default;
-    margin-top: 0;
-    margin-bottom: 12px;
-    display: none;
-}
-
-.tab-panels.measuring .tab-panel {
-    display: block !important;
+    margin-top: 0px;
+    margin-bottom: 10px;
 }
 
 /* Header */
@@ -197,8 +144,15 @@ body {
     gap: 25px;
     padding: 15px;
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.12);
+    border: 2px solid rgba(255, 255, 255, 0.12);
     background: rgba(255, 255, 255, 0.04);
+    transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 255, 255, 0.22);
+    background: rgba(255, 255, 255, 0.055);
 }
 
 .logo-wrapper img {
@@ -218,7 +172,6 @@ body {
     width: 65px;
     height: 65px;
     flex-shrink: 0;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -232,9 +185,10 @@ body {
 
 .card-header h3 {
     margin: 0;
-    font-size: 1.2rem;
+    font-size: 21px;
     font-weight: 700;
-    line-height: 1.2;
+    color: #ffffff;
+    letter-spacing: 0.2px;
 }
 
 .logo-wrapper .maribor-logo,
@@ -248,7 +202,11 @@ body {
 /* Education */
 
 .education {
-    color: white;
+    color:white;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
 }
 
 .education .card {
@@ -277,7 +235,7 @@ body {
     margin-bottom: 5px;
 }
 
-.education p {
+.education .text-wrapper p {
     margin-top: 5px;
     margin-bottom: 5px;
     color: #e3d6f6;
@@ -286,7 +244,12 @@ body {
 /* Experience */
 
 .experience {
-    color: white;
+    color:white;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px;
 }
 
 .experience .card {
@@ -314,7 +277,7 @@ body {
     margin-bottom: 5px;
 }
 
-.experience p {
+.experience .text-wrapper p {
     margin-top: 5px;
     margin-bottom: 5px;
     color: #e3d6f6;
@@ -323,7 +286,12 @@ body {
 /* Activity */
 
 .activity {
-    color: white;
+    color:white;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px;
 }
 
 .activity .card {
@@ -345,55 +313,11 @@ body {
     margin-bottom: 5px;
 }
 
-.activity p {
+.activity .text-wrapper p {
     margin-top: 5px;
     margin-bottom: 5px;
     color: #e3d6f6;
 }
-
-/* Project */
-
-.project {
-    color: white;
-}
-
-.project .card {
-    margin-bottom: 20px;
-}
-
-.project h2 i {
-    margin-right: 8px;
-}
-
-.project h3 {
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    font-size: 20px;
-}
-
-.project p {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    color: #e3d6f6;
-}
-
-/* Skill */
-
-.skill {
-    color: white;
-}
-
-.skill h3 {
-    font-size: 20px;
-}
-
-.skill p {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    color: #e3d6f6;
-}
-
 
 /* =========================
    TIMELINE (education + experience + activity)
@@ -451,7 +375,7 @@ body {
 .activity .section-content .card::after {
     content: "";
     position: absolute;
-    top: 32px; /* dot ile aynı hizaya yakın */
+    top: 32px;
     height: 2px;
     background: rgba(255, 255, 255, 0.25);
     z-index: 1;
@@ -540,94 +464,5 @@ body {
     .activity .section-content .card:nth-child(even) {
         margin: 0;
         padding-left: 34px; /* çizgi + dot için içeriden boşluk */
-    }
-}
-
-
-/* Responsive */
-
-@media (max-width: 900px) {
-    .container {
-        align-items: flex-start;
-        justify-content: flex-start;
-    }
-
-    .tabs-layout {
-        flex-direction: column;
-        gap: 24px;
-    }
-
-    .tabs-sidebar {
-        width: 100%;
-    }
-
-    .tabs-content {
-        width: 100%;
-    }
-
-    .tabs {
-        justify-content: center;
-        flex-wrap: wrap;
-        overflow: visible;
-        row-gap: 10px;
-    }
-
-    .tab-button {
-        flex: 1 1 200px;
-    }
-
-    .header {
-        gap: 16px;
-        align-items: center;
-    }
-
-    .header img {
-        width: 170px;
-        height: 170px;
-        border-radius: 35px;
-    }
-
-    .contact {
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 12px;
-    }
-}
-
-@media (max-width: 640px) {
-    .container {
-        padding: 32px 16px;
-    }
-
-    .header img {
-        width: 140px;
-        height: 140px;
-        border-radius: 28px;
-    }
-
-    .tabs {
-        gap: 10px;
-    }
-
-    .tab-button {
-        flex: 1 1 160px;      /* 130px çok dar; 160 daha okunur */
-        padding: 10px 10px;   /* biraz sıkı ama taşmıyor */
-    }
-
-    .tab-panels {
-        padding: 16px 18px;
-    }
-
-    .skill .skill-grid {
-        grid-template-columns: 1fr;
-        row-gap: 12px;
-    }
-
-    .skill-grid::before {
-        display: none;
-    }
-
-    .skill-grid .card:nth-child(even) {
-        padding-left: 0;
     }
 }

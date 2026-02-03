@@ -127,6 +127,7 @@ body {
     justify-content: center;
     font-weight: 700;
     margin-top: 0px;
+    margin-bottom: 10px;
 }
 
 .section-content {
@@ -195,7 +196,7 @@ body {
 
 .project-title {
     margin: 0;
-    font-size: 22px;
+    font-size: 21px;
     font-weight: 700;
     color: #ffffff;
     letter-spacing: 0.2px;
