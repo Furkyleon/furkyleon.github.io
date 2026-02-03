@@ -27,7 +27,7 @@ body {
 /* Left side */
 
 .left-side {
-    width: 270px;
+    width: 250px;
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
@@ -49,8 +49,8 @@ body {
 }
 
 .header img {
-    width: 270px;
-    height: 270px;
+    width: 250px;
+    height: 250px;
     border-radius: 45px;
 }
 
@@ -306,9 +306,10 @@ body {
 
 @media (max-width: 640px) {
     .container {
-        flex-direction: column;
-        gap: 32px;
         padding: 24px 16px;
+        flex-direction: column;
+        gap: 28px;
+        align-items: stretch;
     }
 
     .left-side {
@@ -317,28 +318,31 @@ body {
     }
 
     .right-side {
-        gap: 36px;
+        gap: 28px;
     }
 
-    /* Projects tek sütun */
     .projects .section-content {
         grid-template-columns: 1fr;
     }
 
-    /* Skills tek sütun */
     .skills .section-content.skills-grid {
         grid-template-columns: 1fr;
     }
 
     .header img {
-        width: min(260px, 80vw);
-        height: min(260px, 80vw);
-        border-radius: 28px;
+        width: 200px;
+        height: 200px;
+        border-radius: 45px;
     }
 
     .contact {
         justify-content: center;
         flex-wrap: wrap;
         gap: 12px;
+    }
+
+    .title {
+        font-size: 18px;
+        padding: 12px;
     }
 }
