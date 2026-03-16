@@ -1,3 +1,3 @@
-# Furkan Yılmaz - Personel about me site.
+# Furkan Yılmaz - Personel Website
 
-[link](furkyleon.github.io)
+[Link to website](https://furkyleon.github.io)
