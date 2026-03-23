@@ -168,6 +168,17 @@ a {
     line-height: 1.7;
 }
 
+.about-section .section-body p {
+    text-align: justify;
+    text-justify: inter-word;
+    text-align-last: left;
+    hyphens: auto;
+}
+
+.about-section .section-body {
+    max-width: 100%;
+}
+
 .stack-list {
     display: flex;
     flex-direction: column;
