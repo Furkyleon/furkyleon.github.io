@@ -293,12 +293,14 @@ a {
 }
 
 .timeline-meta {
+    flex: 0 0 auto;
     text-align: right;
-    min-width: 150px;
+    min-width: 180px;
 }
 
 .timeline-meta p:first-child {
     margin-top: 0;
+    white-space: nowrap;
 }
 
 .detail-list {
